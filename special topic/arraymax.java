@@ -17,5 +17,38 @@ public class arraymax {
             }
         }
         System.out.println("For each loop Max Value: " + max);
+
+        // Using the maxValue method
+        int[] arr2 = {101010, 2131234, 32443, 76767, 28324, 72468, 13172, 72728, 21736};
+        maxValue(arr2);
+        minValue(arr2);
+    }
+
+
+
+
+
+
+
+    static int maxValue(int[] values) {
+        int max = values[0];
+        for (int i = 1; i < values.length; i++) {
+            if (values[i] > max) {
+                max = values[i];
+            }
+        }
+        System.out.println("Max Value from maxValue method: " + max);
+        return max;
+    }
+
+    static int minValue(int[] value){
+        int min= value[0];
+        for (int v : value){
+            if (v<min){
+                min = v;
+            }
+        }
+        System.out.println("Min Value from minValue method: " + min);
+        return min;
     }
 }
