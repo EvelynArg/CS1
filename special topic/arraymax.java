@@ -20,8 +20,10 @@ public class arraymax {
 
         // Using the maxValue method
         int[] arr2 = {101010, 2131234, 32443, 76767, 28324, 72468, 13172, 72728, 21736};
+        int[] arr3={78, 92,85,64,91};
         maxValue(arr2);
         minValue(arr2);
+        samevalue(arr3);
     }
 
 
@@ -50,5 +52,16 @@ public class arraymax {
         }
         System.out.println("Min Value from minValue method: " + min);
         return min;
+    }
+
+    static int samevalue(int[] values){
+        int count=0;
+        for (int v:values){
+            if (v==92){
+                count++;
+            }
+        }
+        System.out.println("Count the number times 92 appears in the array: " + count);
+        return count;
     }
 }
