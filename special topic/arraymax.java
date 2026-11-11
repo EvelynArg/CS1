@@ -24,6 +24,7 @@ public class arraymax {
         maxValue(arr2);
         minValue(arr2);
         samevalue(arr3, 92);
+        
     }
 
 
