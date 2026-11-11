@@ -23,7 +23,7 @@ public class arraymax {
         int[] arr3={78, 92,85,64,91};
         maxValue(arr2);
         minValue(arr2);
-        samevalue(arr3);
+        samevalue(arr3, 92);
     }
 
 
@@ -54,14 +54,24 @@ public class arraymax {
         return min;
     }
 
-    static int samevalue(int[] values){
+    static int samevalue(int[] values, int target){
         int count=0;
         for (int v:values){
-            if (v==92){
+            if (v==target){
                 count++;
             }
         }
-        System.out.println("Count the number times 92 appears in the array: " + count);
+        System.out.println("Count the number times " + target + " appears in the array: " + count);
         return count;
+    }
+
+    static int index(int[] values, int target){
+        int index=-1;
+        for (int i=0;i<values.length;i++){
+            if(values[i]==target){
+                index = i;
+            }
+        }
+        return index;
     }
 }
