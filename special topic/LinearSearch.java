@@ -4,7 +4,10 @@ public class LinearSearch {
         index(array, 18);
 
         int[] scores={67,65,88,99,100,67};
-        System.out.print(score(scores,70));
+        System.out.println(score(scores,70));
+
+        int[] temperatures={72, 80,75,90,83};
+        averange(temperatures);
         
     }
 
@@ -27,5 +30,22 @@ public class LinearSearch {
             }
         }
         return index;
+    }
+    static void averange(int[] temp){
+        int promedio=0, count=0;
+        
+        for(int t:temp){
+           promedio+= t;
+        }
+
+        promedio=promedio/ temp.length;
+
+        for (int tem: temp){
+            if(promedio < tem){
+                count++;
+            }
+        }
+        System.out.print("Average: " + promedio + "\n Temperatures above average: " + count);
+        
     }
 }
