@@ -1,18 +1,37 @@
-public class Main {
-public static void update(int[] a) {
-a[1] = a[0] + a[2];
-a = new int[]{8, 8, 8};
-a[0] = 99;
-}
-public static void main(String[] args) {
-int[] nums = {2, 5, 6};
-update(nums);
-int sum = 0;
-for (int i = 0; i < nums.length; i++) {
-sum += nums[i];
-}
-System.out.println("First: " + nums[0]);
-System.out.println("Second: " + nums[1]);
-System.out.println("Sum: " + sum);
-}
-}
+class Counter { 
+
+    int value; 
+
+    public Counter(int start) { value = start; } 
+
+    public void add(int n) { value += n; } 
+
+} 
+
+public class Main { 
+
+    public static void change(int x) { x += 5; } 
+
+    public static void main(String[] args) {
+
+        Counter a = new Counter(4); 
+
+        Counter b = new Counter(7); 
+
+        a.add(3); 
+
+        int x = a.value; 
+
+        change(x); 
+
+        b.add(x); 
+
+        System.out.println("A: " + a.value); 
+
+        System.out.println("B: " + b.value); 
+
+        System.out.println("X: " + x); 
+
+    } 
+
+} 
